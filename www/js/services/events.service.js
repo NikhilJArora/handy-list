@@ -8,11 +8,15 @@ angular.module('events')
 function eventsFactory($log) {
 
   var eventsObj = {};
+  var eventsList = [
+      {eventId: 1, title: 'Backyard BBQ', description: 'event will be held in the backyard', date:'2016-12-22'},
+      {eventId: 2, title: 'Family Gathering', description: 'event will be held in the backyard', date:'2016-12-25'}
+  ];
 
 
 //Public API//
   var service = {
-    getEventsList : getEventsList,
+    getEvents : getEvents,
     deleteEvent : deleteEvent,
     addEvent : addEvent
   };
@@ -23,12 +27,12 @@ function eventsFactory($log) {
 
 
 //returns the minimal list used to build the list view for user to choose what event they want to view
-function getEventsList() {
-
+function getEvents() {
+  return eventsList;
 }
 
 //returns the full event with all detailed information (used for the event page )
-function getEventDetailed() {
+function getEventDetailed(name) {
 
 }
 

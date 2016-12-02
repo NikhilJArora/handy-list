@@ -1,14 +1,14 @@
 (function() {
 'use strict';
-angular.module('events', []);
-
 angular.module('events')
   .component('eventList',{
     templateUrl:'js/components/event-list/event-list.template.html',
-    controller:['$log', eventListController]
+    controller: ['$log','eventsService', eventListController]
   });
 
-function eventListController($log) {
+
+
+function eventListController($log, eventsService) {
   var vm = this;
 
   vm.listSettings = {
@@ -16,6 +16,8 @@ function eventListController($log) {
     shouldShowReorder : false,
     listCanSwipe : true
   }
+
+  //eventsService.getEvents();
 
   vm.events = [
     {eventId: 1, title: 'Backyard BBQ', description: 'event will be held in the backyard', date:'2016-12-22'},
