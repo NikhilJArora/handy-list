@@ -10,11 +10,12 @@ Mobile App Design:
 Goal: create an easy to use mobile app to be many to create events, add invitees (using contacts), and add/schedule tasks under an event.
 
 Views: (Wire-frames will do uploaded at later time)
-(unAuth)
+
+(unauthorized)
  - login page: form which takes user credentials or access to (add user page)
  - add User page: form which accepts a new users information, send as a post request to users endpoint which will determine if user is unique
 
-(Auth)
+(authorized)
  - Events page: list of all events assigned to a user
  - Event Detailed page: used for user to view all recorded details of an event - also contains links to: invitees, Tasks, Event calendar)
  - Event Detailed Edit page: allow you to edit the details of your event
@@ -27,6 +28,7 @@ Views: (Wire-frames will do uploaded at later time)
 Restful API: (not is this project)
 - the mobile app will communicate with a Restful API to get all GET, POST, PUT and DELETE all the entities it requires
 - project URL will be located here once started...
+
 current API endpoints:
 - /users
 - /events
